@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+<servlet>
+	<servlet-name>Xysklj_times</servlet-name>
+	<servlet-class>xysk.Xysklj_times</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Xysklj_times</servlet-name>
+	<url-pattern>/Xysklj_times</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Xysklj_01201Jd</servlet-name>
+	<servlet-class>xysk.Xysklj_01201Jd</servlet-class>
+	<load-on-startup>2</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Xysklj_01201Jd</servlet-name>
+	<url-pattern>/xysk.Xysklj_01201Jd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Xysklj_01301Jd</servlet-name>
+	<servlet-class>xysk.Xysklj_01301Jd</servlet-class>
+	<load-on-startup>3</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Xysklj_01301Jd</servlet-name>
+	<url-pattern>/xysk.Xysklj_01301Jd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Xysklj_02201Jd</servlet-name>
+	<servlet-class>xysk.Xysklj_02201Jd</servlet-class>
+	<load-on-startup>4</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Xysklj_02201Jd</servlet-name>
+	<url-pattern>/xysk.Xysklj_02201Jd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Xysklj_02301Jd</servlet-name>
+	<servlet-class>xysk.Xysklj_02301Jd</servlet-class>
+	<load-on-startup>5</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Xysklj_02301Jd</servlet-name>
+	<url-pattern>/xysk.Xysklj_02301Jd</url-pattern>
+</servlet-mapping>
+
+  <session-config>
+    <session-timeout>120</session-timeout>
+  </session-config>
+
+</web-app>

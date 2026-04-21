@@ -1,0 +1,169 @@
+<!-- JavaScript Code
+//-----------------------------------------------------------------------------------#
+// HTML_Name    : 1行目－2行目 COMBO 連動 Java-Script ( .js )
+// Name         : 
+// Date         : 2003/08/01
+// No.  Date            Name            Description
+//-----------------------------------------------------------------------------------#
+//-----------------------------------------------------------------------------------
+var dummy_selectline2 =  new Array("('','00',true,true)");
+var Array_selectline20 =  new Array("('','00',true,true)");
+var Array_selectline21 =  new Array("('','00',true,true)"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline22 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline23 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline24 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline25 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline26 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline27 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('欠品数','8')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline28 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('PSA仕入','9')"
+,"('PSA販売','10')");
+var Array_selectline29 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA販売','10')");
+var Array_selectline210 =  new Array("('','00',true,true)"
+,"('仕入数','1')"
+,"('販売数','2')"
+,"('販売率','3')"
+,"('配本店数','4')"
+,"('売切店舗数','5')"
+,"('売切店発生率','6')"
+,"('返品数','7')"
+,"('欠品数','8')"
+,"('PSA仕入','9')");
+
+// ****************************
+// * ten_COMBO_BOX 書換
+// ****************************
+function pop_selectline2(inForm,selected) {
+
+  if ( inForm.select_selectline1.value == "0" ){
+    clear_selectline2(inForm);
+    clear_salectline3(inForm);
+  } else {
+
+  var selectedArray = eval("Array_selectline2" + selected);
+  var x = 0;
+  var Array_name = "";
+  while (selectedArray.length < inForm.select_selectline2.options.length) {
+   inForm.select_selectline2.options[(inForm.select_selectline2.options.length - 1)] = null;
+  }
+
+  x = eval("Array_selectline2" + selected).length;
+  for (var i=0; i < x; i++) {
+    inForm.select_selectline2.options[i]= null;
+  }
+
+  Array_name = "Array_selectline2" + selected;
+  for (var i=0; i < x; i++) {
+     eval("inForm.select_selectline2.options[i]=" + "new Option" + eval(Array_name)[i]);
+	}
+
+	document.form1.select_Item.options.selectedIndex = 0;
+	inForm.select_selectline2.disabled = false; //有効
+    clear_salectline3(inForm);
+	inForm.select_selectline3.disabled = true; //無効
+  }
+}
+// ****************************
+// * ten_COMBO_BOX クリア
+// ****************************
+function clear_selectline2(inForm) {
+  var selectedArray = dummy_selectline2;
+  var x = 0;
+  var Array_name = "";
+  while (selectedArray.length < inForm.select_selectline2.options.length) {
+   inForm.select_selectline2.options[(inForm.select_selectline2.options.length - 1)] = null;
+  }
+
+  x = dummy_selectline2.length;
+  for (var i=0; i < x; i++) {
+    inForm.select_selectline2.options[i]= null;
+  }
+
+  Array_name = eval("dummy_selectline2");
+  for (var i=0; i < x; i++) {
+     eval("inForm.select_selectline2.options[i]=" + "new Option" + eval(Array_name)[i]);
+  }
+  inForm.select_selectline2.disabled = true;
+}
+
+
+// -->
